@@ -3,18 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
-  },
-  "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue": "vue-cli-service serve",
+    "build:vue": "vue-cli-service build",
+    "css": "npx sass ./src/assets/scss/main.scss ./src/assets/css/source.css -w --no-source-map",
+    "build:css": "npx sass ./src/assets/scss/main.scss ./src/assets/css/source.css -w --no-source-map --style compressed",
+    "tailwind": "tailwindcss -i ./src/assets/css/source.css -o ./src/assets/css/main.css -w",
+    "build:tailwind": "tailwindcss -i ./src/assets/css/source.css -o ./src/assets/css/main.css -w --minify"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-service": "~5.0.0"
+    "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^10.4.13",
+    "pinia": "^2.0.30",
+    "sass": "^1.58.2",
+    "tailwindcss": "^3.2.7",
+    "vue": "^3.2.36",
+    "vue-router": "^4.0.13"
   },
   "browserslist": [
     "> 1%",
